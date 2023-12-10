@@ -26,6 +26,9 @@ dependencies {
 
   testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
+  implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
+  implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.5'
 }
 
 test {
