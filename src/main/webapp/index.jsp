@@ -1,4 +1,4 @@
-<%@ page import="com.example.basicj2ee.ExampleWebService" %>
+<%@ page import="com.example.basicj2ee.API.ExampleWebService" %>
 <%@ page import="com.example.basicj2ee.ExampleJDBC" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="com.example.basicj2ee.ExampleBean" %>
@@ -10,6 +10,19 @@
 </head>
 <body>
   <h1>Welcome to JSP Example</h1>
+
+  <%
+    Boolean isRed = true;
+    if (isRed) {
+  %>
+  <p style="color: red">This is red text.</p>
+  <%
+  } else {
+  %>
+  <p style="color: blue">This is blue text.</p>
+  <%
+    }
+  %>
 
   <form action="ExampleServlet" method="POST">
     <input type="text" name="name" placeholder="Enter your name">
