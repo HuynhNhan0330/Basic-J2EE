@@ -29,6 +29,7 @@ public class LoaiDiemService implements ILoaiDiemService {
         String maxID = loaiDiemDAO.findMaxMaLoaiDiem();
         String newID = Helper.generateNewMa(maxID, "LD");
         loaiDiem.setMaLoaiDiem(newID);
+        loaiDiemDAO.save(loaiDiem);
         return loaiDiem;
     }
 
